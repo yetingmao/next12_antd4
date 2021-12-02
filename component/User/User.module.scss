@@ -1,0 +1,43 @@
+.user {
+  background: #212948;
+  color: #fff;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+
+  .trigger {
+    font-size: 18px;
+    line-height: 64px;
+    padding: 0 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  .info{
+    height: 100%;
+    line-height: 64px;
+    margin-right: 20px;
+    width: 70px;
+  }
+
+
+
+  .ul {
+    display: -ms-flexbox;
+    display: flex;
+    // width: 200px;
+    width: 70px;
+
+    .li {
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      text-align: center;
+    }
+  }
+
+  .menu_group li {
+    padding: 0 24px;
+    line-height: 2em;
+  }
+}

@@ -1,0 +1,45 @@
+.login {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 99;
+    background-image: url("/img/123.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .container {
+        width: 80%;
+        height: 100vh;
+        display: flex;
+        padding: 10%;
+        flex-direction: column;
+        align-items: center;
+
+        .title {
+            font-size: 50px;
+            color: #fff;
+        }
+
+        .data {
+            margin-top: 100px;
+            width: 420px;
+            height: 350px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+
+            .title {
+                font-size: 16px;
+                margin-bottom: 20px;
+                color: #0AA679;
+            }
+        }
+    }
+
+    .footer {
+        color: #0AA679;
+        font-size: 10px;
+    }
+}

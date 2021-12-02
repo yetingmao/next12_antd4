@@ -1,0 +1,28 @@
+{
+  "name": "nextjs-blog",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "rm -rf .next && rm -rf out && next build && next export",
+    "build:serve": "rm -rf .next && next build ",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "antd": "^4.17.2",
+    "axios": "^0.24.0",
+    "next": "12.0.4",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "next-compose-plugins": "^2.2.1",
+    "babel-plugin-import": "^1.13.3",
+    "@zeit/next-less": "^1.0.1",
+    "eslint": "7.32.0",
+    "eslint-config-next": "12.0.2",
+    "sass": "^1.44.0",
+    "less": "^4.1.2"
+  }
+}

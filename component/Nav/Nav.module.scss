@@ -1,0 +1,29 @@
+.nav {
+  .logo {
+    height: 64px;
+    margin: 0 auto;
+    position: relative;
+
+    img {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    .text {
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      line-height: 64px;
+      color: #00aec3;
+      font-weight: bold;
+
+      .min {
+        font-size: 16px;
+      }
+    }
+  }
+}
