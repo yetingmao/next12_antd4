@@ -23,12 +23,17 @@ export default function MyApp({ Component, pageProps }) {
   const logined = () => {
     setIsLogin(true)
   }
+
+  const logout = ()=>{
+    setIsLogin(false);
+  }
+
   return (
     <>
       {
         isLogin
           ?
-          <Logged >
+          <Logged logout={logout}>
             <Component {...pageProps} />
           </Logged>
           :

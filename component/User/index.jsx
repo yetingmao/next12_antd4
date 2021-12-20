@@ -60,6 +60,7 @@ export default function User(props) {
   }
   function logout() {
     window.localStorage.clear();
-    router.push("/login");
+    // router.push("/login");
+    props.out();
   }
 }
