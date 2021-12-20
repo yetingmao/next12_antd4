@@ -10,13 +10,13 @@ const menus = [
     icon: <ToolOutlined />,
     key: "base",
     subs: [
-      { key: "/base/role", title: "角色管理" },
-      { key: "/base/user", title: "用户管理" },
+      { key: "/system/role", title: "角色管理" },
+      { key: "/system/user", title: "用户管理" },
     ],
   },
 ];
 
-export default function (props) {
+export default function Nav(props) {
   const [openKeys, setOpenKeys] = useState([]);
   const [selectedKeys, setselectedKeys] = useState([]);
   const router = useRouter();
@@ -95,7 +95,11 @@ export default function (props) {
     return (
       <Menu.Item key={key} icon={icon}>
         <Link href={key}>
-          <span>{title}</span>
+          <span
+            style={{ width: "100%", height: "100%", display: "inline-block" }}
+          >
+            {title}
+          </span>
         </Link>
       </Menu.Item>
     );

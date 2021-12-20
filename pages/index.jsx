@@ -1,9 +1,11 @@
-//import '../styles/Home.module.css'
-import { Logged } from "../component";
-export default function Home() {
+import React, { useState, useEffect } from "react";
+import styles from "styles/common.module.scss";
+export default function (props) {
+  useEffect(async () => {}, []);
+
   return (
-    <Logged>
-      <div className="container"></div>
-    </Logged>
+    <div className={styles.content}>
+      <div className={styles.template}></div>
+    </div>
   );
 }

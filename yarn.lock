@@ -126,6 +126,11 @@
   resolved "https://registry.nlark.com/@ctrl/tinycolor/download/@ctrl/tinycolor-3.4.0.tgz#c3c5ae543c897caa9c2a68630bed355be5f9990f"
   integrity sha1-w8WuVDyJfKqcKmhjC+01W+X5mQ8=
 
+"@easydarwin/easywasmplayer@^4.0.13":
+  version "4.0.13"
+  resolved "https://registry.nlark.com/@easydarwin/easywasmplayer/download/@easydarwin/easywasmplayer-4.0.13.tgz#83dc92d880e9b0528e5d4cfc9c669a1a1e420c08"
+  integrity sha1-g9yS2IDpsFKOXUz8nGaaGh5CDAg=
+
 "@eslint/eslintrc@^0.4.3":
   version "0.4.3"
   resolved "https://registry.npmmirror.com/@eslint/eslintrc/download/@eslint/eslintrc-0.4.3.tgz#9e42981ef035beb3dd49add17acb96e8ff6f394c"

@@ -1,0 +1,46 @@
+.content {
+  padding: 20px;
+  height: 100%;
+
+  .template {
+    width: 100%;
+    height: 100%;
+
+    .body {
+      .action {}
+
+      .middle {
+        margin-top: 20px;
+      }
+    }
+
+
+  }
+}
+
+.template_model {
+  .model_menu {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+
+    .menu_name {
+      width: 200px;
+      display: flex;
+      justify-content: flex-end;
+
+      .name_wain {
+        color: red;
+        margin-right: 5px;
+      }
+    }
+
+    .menu_value {
+      width: 100%;
+    }
+  }
+
+  .model_menu_base {
+    align-items: baseline;
+  }
+}

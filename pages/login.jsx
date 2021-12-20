@@ -1,14 +1,16 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import { Form, Input, Button, Checkbox } from "antd";
-import { login } from "../api";
+import { login } from "api";
 import { message } from "antd";
-import styles from "../styles/Login.module.scss";
+import styles from "styles/Login.module.scss";
+import { Util } from "/utils";
 
-export default function Login() {
+export default function Login({ logined }) {
   const router = useRouter();
   useEffect(() => {
-    window.localStorage.clear();
+    // window.localStorage.clear();
+    //Util.SetConfig("isLogin", false);
   }, []);
 
   return (
@@ -76,6 +78,7 @@ export default function Login() {
     const { token } = data;
     window.localStorage.setItem("token", token);
     window.localStorage.setItem("username", values.username);
+    logined();
     router.push("/");
   }
 }

@@ -5,7 +5,8 @@ import { Dropdown, Menu } from "antd";
 import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
 // import Image from "next/image";
 import styles from "./User.module.scss";
-export default function (props) {
+import { Util } from "/utils";
+export default function User(props) {
   const router = useRouter();
   const [username, setUsername] = useState();
   useEffect(() => {
@@ -13,15 +14,14 @@ export default function (props) {
     if (username) {
       setUsername(username);
     } else {
-      window.localStorage.clear();
-      //router.push("/login");
+      logout();
     }
   }, []);
   const menu = (
     <Menu className="li_menu">
       <Menu.ItemGroup title="用户中心" className="menu_group">
-        <Menu.Item>你好 - {username}</Menu.Item>
-        <Menu.Item>
+        <Menu.Item key="name">你好 - {username}</Menu.Item>
+        <Menu.Item key="logout">
           <span
             onClick={() => {
               logout();
