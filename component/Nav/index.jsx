@@ -16,13 +16,25 @@ const menus = [
   },
 ];
 
-export default function Nav(props) {
+export default function (props) {
   const [openKeys, setOpenKeys] = useState([]);
   const [selectedKeys, setselectedKeys] = useState([]);
   const router = useRouter();
   useEffect(() => {
     //防止页面刷新侧边栏又初始化了
-    const pathname = router.pathname;
+    let pathname = router.pathname;
+    const asPath = router.asPath;
+    if (pathname !== asPath.split("?")[0] && asPath !== "/login") {
+      //   if (process.browser) {
+      //     const router = useRouter();
+      //   }
+      router.push(asPath);
+      pathname = asPath.split("?")[0];
+      // Have SSR render bad routes as a 404.
+      //console.log("isLogin", Component, pageProps);
+
+      // router.push(asPath);
+    }
     //获取当前所在的目录层级
     const rank = pathname.split("/");
     switch (rank.length) {
@@ -39,8 +51,8 @@ export default function Nav(props) {
     }
   }, []);
   useEffect(() => {
-    setselectedKeys([router.pathname]);
-  }, [router.pathname]);
+    setselectedKeys([router.asPath]);
+  }, [router.asPath]);
 
   return (
     <div className={styles.nav}>
@@ -95,11 +107,9 @@ export default function Nav(props) {
     return (
       <Menu.Item key={key} icon={icon}>
         <Link href={key}>
-          <span
-            style={{ width: "100%", height: "100%", display: "inline-block" }}
-          >
+          <a style={{ width: "100%", height: "100%", display: "inline-block" }}>
             {title}
-          </span>
+          </a>
         </Link>
       </Menu.Item>
     );

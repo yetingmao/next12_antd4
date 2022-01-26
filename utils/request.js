@@ -40,7 +40,12 @@ service.interceptors.request.use(config => {
 service.interceptors.response.use(response => {
     let res;
     if (response.status === 200) {
-        res = response.data;
+        if (response.data.code == 401) {
+            window.localStorage.clear();
+            window.location.href = "/login"
+        } else {
+            res = response.data;
+        }
     } else if (response.status === 401) {
         window.localStorage.clear();
         window.location.href = "/login"

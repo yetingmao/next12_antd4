@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
+
 import { Dropdown, Menu } from "antd";
 import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
 // import Image from "next/image";
 import styles from "./User.module.scss";
 import { Util } from "/utils";
 export default function User(props) {
-  const router = useRouter();
   const [username, setUsername] = useState();
   useEffect(() => {
     const username = window.localStorage.getItem("username");
@@ -60,7 +59,6 @@ export default function User(props) {
   }
   function logout() {
     window.localStorage.clear();
-    // router.push("/login");
     props.out();
   }
 }
